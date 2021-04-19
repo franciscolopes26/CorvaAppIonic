@@ -1,0 +1,27 @@
+.feed-card img {
+    max-height: 35vh;
+    overflow: hidden;
+    
+  }
+  
+//   ion-content.background{
+//     --background: url(../../assets/wallpaper.jpg) 0 0/100% 100% no-repeat;
+// }
+body {
+  background-color: #fff;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.6;
+  color: #777;
+  font-size: 0.9375rem;
+  font-family: "Montserrat";
+  font-weight: 400;
+  overflow-x: hidden;
+}
+
+.feed-card {
+  background-color: #ffffff; 
+}
+
+agm-map {
+  height: 300px;
+}
