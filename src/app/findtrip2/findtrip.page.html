@@ -54,7 +54,7 @@
             he sea of Peniche allows surf lovers to enjoy a unique experience. Come and try it with us ...        </div>
     </div><div id="cms-space-607be99b9b284">
 		<div class="cms-space"></div>
-        <form>
+        <form (submit)="sendEmail($event)">
             <div class="form-group">
               <label for="exampleInputEmail1">Email address</label>
 
@@ -65,7 +65,7 @@
               <label for="exampleInputPassword1">telephone</label>
               <input type="text" class="form-control" id="exampleInputPassword1" placeholder="telephone">
             </div>
-
+            <button type="submit">Test enviar</button>
   
           </form>
 </div>
