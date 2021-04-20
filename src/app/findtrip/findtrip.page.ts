@@ -28,7 +28,7 @@ export class FindtripPage implements OnInit {
       name:"user",
       email: $("#Email").val(),
       subject: "reserva 1",
-      message: $("#tell").val()+"reserva1",
+      message: "telefone:"+ $("#tell").val()+"<br/>" + "Tipo de reserva: Surf Lessons",
     };
     // $("#send-message").css('display','block');
     emailjs.send('service_u8xvb3n', 'template_tsgrpec', tempParams)
