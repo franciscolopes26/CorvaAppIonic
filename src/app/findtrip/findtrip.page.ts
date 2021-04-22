@@ -11,6 +11,7 @@ import{ init } from 'emailjs-com';
 init("user_AYa0wtROHDJ7MvQKlF21R");
 import emailjs, { EmailJSResponseStatus } from 'emailjs-com';
 // import { timeLog } from 'node:console';
+var now = new Date;
 
 @Component({
   selector: 'app-findtrip',
@@ -29,10 +30,10 @@ export class FindtripPage implements OnInit {
      
       name: $("#nome").val(),
       email: $("#Email").val(),
-      tel: $("#tell").val(),
+      tel: $("#tell").val().toString(),
       subject: "reserva 1",
-      message: $("#tell").val(),
-      time: Date.now()
+      message: $("#mess").val(),
+      time: new Date(Date.UTC(now.getUTCFullYear(),now.getUTCMonth()))
     };
     // $("#send-message").css('display','block');
     emailjs.send('service_u8xvb3n', 'template_tsgrpec', tempParams)

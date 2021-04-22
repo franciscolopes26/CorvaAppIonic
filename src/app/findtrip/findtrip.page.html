@@ -58,6 +58,10 @@
 		<div class="cms-space"></div>
         <form  (submit)="sendEmail($event)">
             <div class="form-group">
+              <label for="tell">Nome</label>
+              <input type="text" class="form-control" id="nome" name="nome" placeholder="telephone">
+            </div>
+            <div class="form-group">
               <label for="Email">Email address</label>
               <input type="email" class="form-control" name="Eamil" id="Email" aria-describedby="emailHelp" placeholder="Enter email">
               <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
@@ -66,10 +70,7 @@
               <label for="tell">telephone</label>
               <input type="text" class="form-control" id="tell" name="tell" placeholder="telephone">
             </div>
-            <div class="form-group">
-              <label for="tell">Nome</label>
-              <input type="text" class="form-control" id="nome" name="nome" placeholder="telephone">
-            </div>
+         
             <button type="submit">Test enviar</button>
   
           </form>
