@@ -3,13 +3,14 @@ import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { NavController, AlertController } from '@ionic/angular';
 
-import { getLocaleDateFormat } from '@angular/common';
+import { getLocaleDateFormat, getLocaleTimeFormat } from '@angular/common';
 import { map } from 'rxjs/operators';
 
 import * as $ from 'jquery';
 import{ init } from 'emailjs-com';
 init("user_AYa0wtROHDJ7MvQKlF21R");
 import emailjs, { EmailJSResponseStatus } from 'emailjs-com';
+// import { timeLog } from 'node:console';
 
 @Component({
   selector: 'app-findtrip',
@@ -25,10 +26,13 @@ export class FindtripPage implements OnInit {
    
    sendEmail(e: Event) {
     var tempParams = {
-      name:"user",
+     
+      name: $("#nome").val(),
       email: $("#Email").val(),
+      tel: $("#tell").val(),
       subject: "reserva 1",
-      message: "telefone:"+ $("#tell").val()+"<br/>" + "Tipo de reserva: Surf Lessons",
+      message: $("#tell").val(),
+      time: Date.now()
     };
     // $("#send-message").css('display','block');
     emailjs.send('service_u8xvb3n', 'template_tsgrpec', tempParams)
