@@ -58,8 +58,8 @@
 		<div class="cms-space"></div>
         <form  (submit)="sendEmail($event)">
             <div class="form-group">
-              <label for="tell">Nome</label>
-              <input type="text" class="form-control" id="nome" name="nome" placeholder="telephone">
+              <label for="tell">Name</label>
+              <input type="text" class="form-control" id="nome" name="nome" placeholder="Name">
             </div>
             <div class="form-group">
               <label for="Email">Email address</label>
@@ -70,7 +70,11 @@
               <label for="tell">telephone</label>
               <input type="text" class="form-control" id="tell" name="tell" placeholder="telephone">
             </div>
-         
+            <div class="form-group">
+              <label for="tell">Message</label>
+              <input type="text" class="form-control" id="mess" name="mess" placeholder="Message">
+              <small id="emailHelp" class="form-text text-muted">here you can plan the day of your activity</small>
+            </div>
             <button type="submit">Test enviar</button>
   
           </form>

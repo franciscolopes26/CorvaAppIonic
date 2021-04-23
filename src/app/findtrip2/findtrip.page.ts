@@ -5,7 +5,12 @@ import { NavController, AlertController } from '@ionic/angular';
 
 import { getLocaleDateFormat } from '@angular/common';
 import { map } from 'rxjs/operators';
-
+import * as $ from 'jquery';
+import{ init } from 'emailjs-com';
+init("user_AYa0wtROHDJ7MvQKlF21R");
+import emailjs, { EmailJSResponseStatus } from 'emailjs-com';
+// import { timeLog } from 'node:console';
+var now = new Date;
 
 @Component({
   selector: 'app-findtrip',
@@ -14,102 +19,27 @@ import { map } from 'rxjs/operators';
 
 })
 export class FindtripPage implements OnInit {
+  ngOnInit() {
+  }
   
+   
+   sendEmail(e: Event) {
+    var tempParams = {
+     
+      name: $("#nome").val(),
+      email: $("#Email").val(),
+      tel: $("#tell").val().toString(),
+      subject: "reserva 1",
+      message: $("#mess").val(),
+      type:"Surf Lessons",
+      time: new Date(Date.UTC(now.getUTCFullYear(),now.getUTCMonth()))
+    };
+    // $("#send-message").css('display','block');
+    emailjs.send('service_u8xvb3n', 'template_tsgrpec', tempParams)
+    alert("Email enviado com sucesso!");
+     window.location.reload()
+  }
+  }
  
-  rideoffers: Observable<any>;
-  isDriver: boolean
 
-  // constructor(
-  // )
-    // ) { 
-    //   this.rideofferCollection = afstore.collection<Rideoffer>('rideoffers');
-    //   this.rideoffers = this.afstore.collection('rideoffers').snapshotChanges().pipe(
-    //     map(actions => {
-    //       return actions.map(a => {
-    //         const data = a.payload.doc.data();
-    //         const id = a.payload.doc.id;
-    //         return { id, ...data };
-    //       });
-    //     })
-    //   );
-    //   firebase.auth().onAuthStateChanged(user =>{
-    //     if(user){
-    //       firebase
-    //     .firestore()
-    //     .doc(`users/${user.uid}`)
-    //     .get()
-    //     .then(usersSnapshot => {
-    //       this.isDriver = usersSnapshot.data().isDriver;
-    //       });
-    //     }
-    //   });
-    //   // this.mainuser = afstore.doc(`rideoffers/${user.getUID()}`)
-		// 	// this.sub = this.mainuser.valueChanges().subscribe(event => {
-    //   // this.phoneno = event.phoneno 
-    //   // console.log(this.phoneno)
-    //   // var link = 'https://wa.me/'+ this.phoneno
-    //   // console.log(link)
-		// //})
-    
   
-    // navigateToChat(value) {
-    //   window.open('https://wa.me/'+ value)
-    // }
-  
-    ngOnInit() {
-    }
-
-
-    // goToRides() {
-    //   return this.navc.navigateForward(['/rides']);
-    // }
-
-    // saveToMyRequest(value){
-    //   this.afstore.doc("users/"+this.user.getUID()+"/myRequest/"+value.id).set({
-    //     pickup:  value.pickup,
-    //     destination: value.destination,
-    //     date: value.date,
-    //     time : value.time,
-    //     passenger: value.passenger,
-    //     fee : value.fee,
-    //     userid : value.userid,
-    //     phoneno : value.phoneno,
-    //     name : value.name,
-    //     isApprove: false,
-    //   }).then(()=>{
-    //     this.afstore.collection('rideoffers').doc(value.id).collection('requestList').doc("" + this.afstore.createId()).set({
-    //       isApproved: false,
-    //       userid: this.user.getUID(),
-    //       username: this.user.getUsername()
-    //     }).then(()=>{
-    //       this.presentAlert("Saved to My Request","Wait for user approval")
-    //     })
-        
-    //   })
-    // }
-
-    // async presentAlert(title: string, content: string) {
-    //   const alert = await this.alertController.create({
-    //     header: title,
-    //     message: content,
-    //     buttons: ['OK']
-    //   })
-  
-    //   await alert.present()
-    // }
-
-    // const searchbar = document.querySelector('ion-searchbar');
-    // const items = Array.from(document.querySelector('ion-list').children);
-    
-    // searchbar.addEventListener('ionInput', handleInput);
-    // function handleInput(event) {
-    //   const query = event.target.value.toLowerCase();
-    //   requestAnimationFrame(() => {
-    //     items.forEach(item => {
-    //       const shouldShow = item.textContent.toLowerCase().indexOf(query) > -1;
-    //       item.style.display = shouldShow ? 'block' : 'none';
-    //     });
-    //   });
-    // }
-
-}

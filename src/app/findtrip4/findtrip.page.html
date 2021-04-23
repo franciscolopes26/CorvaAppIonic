@@ -54,20 +54,28 @@
             he sea of Peniche allows surf lovers to enjoy a unique experience. Come and try it with us ...        </div>
     </div><div id="cms-space-607be99b9b284">
 		<div class="cms-space"></div>
-        <form>
-            <div class="form-group">
-              <label for="exampleInputEmail1">Email address</label>
+    <form  (submit)="sendEmail($event)">
+      <div class="form-group">
+        <label for="tell">Name</label>
+        <input type="text" class="form-control" id="nome" name="nome" placeholder="Name">
+      </div>
+      <div class="form-group">
+        <label for="Email">Email address</label>
+        <input type="email" class="form-control" name="Eamil" id="Email" aria-describedby="emailHelp" placeholder="Enter email">
+        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+      </div>
+      <div class="form-group">
+        <label for="tell">telephone</label>
+        <input type="text" class="form-control" id="tell" name="tell" placeholder="telephone">
+      </div>
+      <div class="form-group">
+        <label for="tell">Message</label>
+        <input type="text" class="form-control" id="mess" name="mess" placeholder="Message">
+        <small id="emailHelp" class="form-text text-muted">here you can plan the day of your activity</small>
+      </div>
+      <button type="submit">Test enviar</button>
 
-              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-              <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-            </div>
-            <div class="form-group">
-              <label for="exampleInputPassword1">telephone</label>
-              <input type="text" class="form-control" id="exampleInputPassword1" placeholder="telephone">
-            </div>
-
-  
-          </form>
+    </form>
 </div>
 
 <div id="cms-button-2" class="cms-button-wrapper btn-align-left  btn-align-left-md btn-align-left-sm btn-align-left-xs ">
