@@ -4,7 +4,8 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    loadChildren: () => import('./findtrip/findtrip.module').then(m => m.FindtripPageModule)
+    loadChildren: () => import('./tab1/tab1.module').then(m => m.Tab1PageModule)
+    // loadChildren: () => import('./findtrip/findtrip.module').then(m => m.FindtripPageModule)
     
   },
   {
