@@ -9,6 +9,11 @@ const routes: Routes = [
     
   },
   {
+    path: 'findtrip1',
+    loadChildren: () => import('./findtrip/findtrip.module').then(m => m.FindtripPageModule)
+    
+  },
+  {
     path: 'findtrip2',
     loadChildren: () => import('./findtrip2/findtrip2.module').then(m => m.FindtripPageModule)
     
