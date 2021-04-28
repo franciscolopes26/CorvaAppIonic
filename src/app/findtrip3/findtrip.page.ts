@@ -31,7 +31,8 @@ export class FindtripPage implements OnInit {
       tel: $("#tell").val().toString(),
       subject: "reserva 1",
       message: $("#mess").val(),
-      type:"Surf Lessons",
+      num: $("#num").val(),
+      type:"Horse Rides",
       time: new Date(Date.UTC(now.getUTCFullYear(),now.getUTCMonth()))
     };
     // $("#send-message").css('display','block');
