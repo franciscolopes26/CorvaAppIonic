@@ -1,7 +1,8 @@
 # CorvaAppIonic
 
 # Project developed by Francisco Lopes at an internship for newoxygen for the CorvaFarmHouse.
- he project was developed to manage the activities of CorvaFarmHouse
+ he project was developed to manage the activities of CorvaFarmHouse.
+ 
 
 
 ![print 10](https://user-images.githubusercontent.com/66685912/116059108-68d4e080-a678-11eb-83f2-efc49368d6e9.png)
